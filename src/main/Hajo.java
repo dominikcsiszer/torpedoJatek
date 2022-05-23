@@ -7,11 +7,11 @@ public class Hajo {
         this.pozicio = pozicio;
     }
     
-    public String talalat(int poz) {
-        for (int i = 0; i < pozicio.length; i++) {
-            if(pozicio[i] == poz)
-                return "talált";
-        }
-        return "mellé";
+    public boolean talalat(int poz) {
+        int i = 0, N = pozicio.length;
+        while(i < N && !(pozicio[i] == poz))
+            i++;
+        
+        return i < N;
     }
 }
